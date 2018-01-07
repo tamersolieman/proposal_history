@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <h2>Add Proposal</h2>
-  <form class="form-horizontal" action="/list" method="POST">
+  <form class="form-horizontal" action="list" method="POST">
     <div class="form-group">
       <label class="control-label col-sm-2" for="proposal_type">Proposal Type:</label>
       <div class="dropdown ">
