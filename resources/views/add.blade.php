@@ -16,15 +16,15 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="proposal_no" >Proposal No:</label>
+      <label class="control-label col-sm-2" for="proposal_nos" >Proposal No:</label>
       <div class="col-sm-10">
-        <input class="form-control" id="proposal_no" value="{{$last_id+1}}" disabled="">
+        <input class="form-control" name="proposal_no2" id="proposal_no2" value="{{$last_id+1}}" disabled="">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="project_name">Project Name:</label>
       <div class="col-sm-10">
-        <input class="form-control" id="project_name" placeholder="Enter project name">
+        <input class="form-control" id="project_name" name="project_name" placeholder="Enter project name">
       </div>
     </div>
     <div class="form-group">
@@ -40,25 +40,25 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="contact_name">Contact Name:</label>
       <div class="col-sm-10">
-        <input class="form-control" id="contact_name" placeholder="Enter contact name">
+        <input class="form-control" id="contact_name"  name="contact_name" placeholder="Enter contact name">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="contact_mobile">Contact Mobile:</label>
       <div class="col-sm-10">
-        <input class="form-control" id="contact_mobile" placeholder="Enter contact mobile">
+        <input class="form-control" id="contact_mobile" name="contact_mobile" placeholder="Enter contact mobile">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="contact_email">Contact Email:</label>
       <div class="col-sm-10">
-        <input class="form-control" id="contact_email" placeholder="Enter contact email">
+        <input class="form-control" id="contact_email" name="contact_email" placeholder="Enter contact email">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="notes">Notes:</label>
       <div class="col-sm-10">
-        <textarea  class="form-control" rows="5" id="notes" placeholder="Enter notes"></textarea>
+        <textarea  class="form-control" rows="5" id="notes" name="notes" placeholder="Enter notes"></textarea>
       </div>
     </div>
     <div class="form-group">

@@ -10,7 +10,7 @@ class Proposal extends Model
     {
     	$newProposal = new Proposal();
         $newProposal->proposal_type = $request->input('proposal_type');
-        $newProposal->proposal_no = $request->input('proposal_type').$request->input('proposal_no');
+        $newProposal->proposal_no = $request->input('proposal_type')."-".$request->input('proposal_no2');
         $newProposal->project_name = $request->input('project_name');
         $newProposal->project_type = $request->input('project_type');
         $newProposal->contact_name = $request->input('contact_name');
