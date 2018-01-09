@@ -28,54 +28,64 @@ class HomeController extends Controller
         return view('home');
     }
 
-    /**
-    * List the proposals
-    *
-    * @return void
-    */
-    public function listProposals()
-    {
-      $proposal= Proposal::all();
-      $arr = array('proposal' =>$proposal);
-      return view('list',$arr);
-    }
+    // /**
+    // * List the proposals
+    // *
+    // * @return void
+    // */
+    // public function listProposals()
+    // {
+    //   $proposal= Proposal::all();
+    //   $arr = array('proposal' =>$proposal);
+    //   return view('index',$arr);
+    // }
 
-    /**
-    * Add new proposals
-    *
-    * @return void
-    */
-    public function addProposals(Request $request)
-    {
-      if ($request->isMethod('POST')) {
-        //Validation Here
-        //
+    // /**
+    // * Add new proposals
+    // *
+    // * @return void
+    // */
+    // public function addProposals(Request $request)
+    // {
+    //   if ($request->isMethod('POST')) {
+    //     //Validation Here
+    //     //
 
-        //Get the last id
-      $last_id =  Proposal::orderBy('id', 'desc')->first();
-      //$arr = array('last_id' => $last_id->id);
+    //     //Get the last id
+    //   $last_id =  Proposal::orderBy('id', 'desc')->first();
+    //   //$arr = array('last_id' => $last_id->id);
 
-       $newProposal = new Proposal();
-        $newProposal->proposal_type = $request->input('proposal_type');
-        $newProposal->proposal_no = $request->input('proposal_type')."-".$last_id->id;
-        $newProposal->project_name = $request->input('project_name');
-        $newProposal->project_type = $request->input('project_type');
-        $newProposal->contact_name = $request->input('contact_name');
-        $newProposal->contact_mobile = $request->input('contact_mobile');
-        $newProposal->contact_email = $request->input('contact_email');
-        $newProposal->notes = $request->input('notes');
+    //    $newProposal = new Proposal();
+    //     $newProposal->proposal_type = $request->input('proposal_type');
+    //     $newProposal->proposal_no = $request->input('proposal_type')."-".$last_id->id;
+    //     $newProposal->project_name = $request->input('project_name');
+    //     $newProposal->project_type = $request->input('project_type');
+    //     $newProposal->contact_name = $request->input('contact_name');
+    //     $newProposal->contact_mobile = $request->input('contact_mobile');
+    //     $newProposal->contact_email = $request->input('contact_email');
+    //     $newProposal->notes = $request->input('notes');
 
-        //dd($newProposal);
-        $newProposal->save();
+    //     //dd($newProposal);
+    //     $newProposal->save();
+    //     //return view('list');
        
-      }
-      //Get the last id
-      $last_id =  Proposal::orderBy('id', 'desc')->first();
-      $arr = array('last_id' => $last_id->id);
+    //   }
+    //   //Get the last id
+    //   $last_id =  Proposal::orderBy('id', 'desc')->first();
+    //   $arr = array('last_id' => $last_id->id);
+    //       // return ($arr);
      
-      return view('add', $arr);
-    }
+    //   return view('create', $arr);
+    
+    // }
 
+    // public function getProposal($id)
+    // {
+    //     $proposal = Proposal::find($id);
+    //     $arr = array('proposal' => $proposal );
+    //     dd($arr);
+    //     return view('proposal',$arr);
+    // }
 
 
 

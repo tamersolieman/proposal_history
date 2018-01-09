@@ -19,27 +19,33 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/list', 'HomeController@listProposals')->name('list');
+Route::get('/index', 'ProposalContrtroller@index');
 
-Route::get('/add', 'HomeController@addProposals')->name('add');
+Route::get('/create', 'ProposalContrtroller@create');
 
-Route::post('/list', 'HomeController@addProposals')->name('add');
+Route::post('/index', 'ProposalContrtroller@store');
+
+Route::get('/proposal/{id}','ProposalContrtroller@show');
+
+Route::get('/proposal/{id}/edit','ProposalContrtroller@update');
+
+Route::patch('/proposal/{id}/','ProposalContrtroller@update');
 
 
 /*
 Posts
 
-List -> GET /posts 
+view all of the posts or select * from posts  -> GET /posts 
 
-View create form ->GET /posts/create
+we want to create create a post and it'll display the form ->GET /posts/create
 
-Submit create form ->POST /posts
+Submit the post to the database ->POST /posts
 
-Get data for update form ->GET /posts/{id}/edit
+if you want to edit an existing post ->GET /posts/{id}/edit
 
-View data for single post ->GET /posts/{id}
+view a specific post -> GET /posts/{id}
 
-Update data from update form->PATCH /posts/{id}
+submit the edit post to the database ->PATCH /posts/{id}
 
 Delete post->DELETE /posts/{id}
 
